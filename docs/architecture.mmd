@@ -1,0 +1,19 @@
+flowchart TD
+  UI[Streamlit UI] --> API[FastAPI / RBAC / Rate Limit]
+  API --> SEC[Input Security Guard]
+  SEC --> SUP[LangGraph Supervisor]
+  SUP --> RET[Retrieval Agent]
+  RET --> PC[(Pinecone Hybrid Knowledge Base)]
+  RET --> RLM[RLM Research Agent]
+  RET --> ANA[Python Analysis Agent]
+  SUP --> MCP[MCP Enterprise Tools]
+  RLM --> VAL[Citation & Grounding Validator]
+  ANA --> VAL
+  RET --> VAL
+  VAL --> RESP[Response Agent]
+  RESP --> MEM[Session Memory]
+  SUP -.-> LS[LangSmith]
+  RET -.-> LS
+  RLM -.-> LS
+  ANA -.-> LS
+  RESP -.-> LS

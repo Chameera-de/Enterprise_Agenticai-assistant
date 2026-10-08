@@ -1,0 +1,1 @@
+{"id":"RUN-PAY-01","title":"Payment Failure Runbook","document_type":"runbook","department":"payments","access_level":"internal","created_date":"2026-02-01","text":"For elevated payment failures inspect dependency latency, database and HTTP connection pools, retry rates, circuit breaker state and worker saturation. Disable nonessential retries before scaling workers."}
